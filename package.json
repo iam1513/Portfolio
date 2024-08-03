@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "emailjs-com": "^3.2.0",
+>>>>>>> ebe8de32c392dac6acf4a36bc07ad7bff14ffc37
     "framer-motion": "^11.3.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
