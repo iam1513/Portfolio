@@ -15,10 +15,10 @@ const NavContent = () => (
       <a href="#home">Home</a>
       <a href="#timeline">Projects</a>
       <a href="#skills">Skills</a>
-
+      <a href="#contact">Profiles</a>
       {/* <a href="#services">Services</a>
       <a href="#testimonial">Testimonial</a>
-      <a href="#contact">Contact</a> */}
+      */}
     </div>
   </>
 );

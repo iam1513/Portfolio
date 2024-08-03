@@ -23,6 +23,7 @@ const Timeline = () => {
             heading={item.title}
             text={item.date}
             description={item.description}
+            url={item.url}
           />
         ))}
       </div>
@@ -30,7 +31,7 @@ const Timeline = () => {
   );
 };
 
-const TimelineItem = ({ heading, text, index, description }) => {
+const TimelineItem = ({ heading, text, index, description, url }) => {
   const tiltEffect =
     index % 2 === 0
       ? {
@@ -62,6 +63,9 @@ const TimelineItem = ({ heading, text, index, description }) => {
         <div className="descriptionBox">
           <p>{description}</p>
         </div>
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          <button>Checkout</button>
+        </a>
       </motion.div>
     </div>
   );

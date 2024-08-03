@@ -1,8 +1,8 @@
 #timeline {
-  margin: 5rem 0;
+  padding-top: 2rem;
   width: 100%;
   background-color: $col5;
-  //   z-index: -10;
+  padding-bottom: 2rem;
 
   > h1 {
     text-align: flex-start;
@@ -46,7 +46,7 @@
     transition: transform 0.3s ease-in-out;
 
     &:nth-child(odd) {
-      text-align: right;
+      text-align: left;
 
       &::after {
         animation: upanddown 0.3s infinite ease-in alternate;
@@ -85,6 +85,9 @@
       overflow: hidden;
       z-index: 10;
       transform: perspective(1000px);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
 
       &::before {
         content: "";
@@ -119,6 +122,23 @@
         border-radius: 6px;
         margin-top: 10px;
         display: block;
+      }
+
+      > a {
+        align-self: flex-end; // Align the button to the right side
+        margin-top: 10px;
+
+        > button {
+          background-color: $col6;
+          padding: 8px;
+          // border: 2px solid $col2;
+          // border-radius: 4px;
+          color: white;
+
+          &:hover {
+            scale: 1.2;
+          }
+        }
       }
     }
   }

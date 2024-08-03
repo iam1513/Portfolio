@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
-import me from "../assets/logo.png";
+// import me from "../assets/logo.png";
 
 const Home = () => {
   const animations = {
@@ -70,14 +70,14 @@ const Home = () => {
 
           <div>
             <a href="mailto:omshelke1513@gmail.com">Hire Me</a>
-            <a href="#work">
+            <a href="#timeline">
               Projects <BsArrowUpRight />
             </a>
           </div>
         </div>
       </section>
       <section className="relative">
-        <img src={me} alt="Om" className="relative z-10" />
+        {/* <img src={me} alt="Om" className="relative z-10" /> */}
       </section>
       <BsChevronDown />
     </div>
