@@ -1,4 +1,5 @@
 import Contact from "./components/Contact.jsx";
+import EmailForm from "./components/EmailForm.jsx";
 import Header from "./components/Header.jsx";
 import Home from "./components/Home.jsx";
 import Skills from "./components/Skills.jsx";
