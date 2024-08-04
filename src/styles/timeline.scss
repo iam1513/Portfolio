@@ -1,0 +1,166 @@
+#timeline {
+  padding-top: 2rem;
+  width: 100%;
+  background-color: $col5;
+  padding-bottom: 2rem;
+
+  > h1 {
+    text-align: flex-start;
+    color: $col2;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 32%;
+    font: 800 5rem $text1;
+    letter-spacing: 20px;
+  }
+
+  .timelineBox {
+    width: 100%;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      background-color: $color5;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: 3px;
+      z-index: 1;
+    }
+  }
+
+  .timelineItem {
+    padding: 1rem 3rem;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    transform: perspective(1000px);
+    transition: transform 0.3s ease-in-out;
+
+    &:nth-child(odd) {
+      text-align: left;
+
+      &::after {
+        animation: upanddown 0.3s infinite ease-in alternate;
+      }
+    }
+
+    &:nth-child(even) {
+      text-align: left;
+
+      &::after {
+        animation: upanddown 0.5s infinite ease-in alternate;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -21px;
+      background-color: $color5;
+      border: 4px solid $color5;
+      top: 50%;
+      border-radius: 50%;
+      z-index: 50;
+      box-shadow: 0 0 15px $col3;
+    }
+
+    .inner {
+      padding: 20px 30px;
+      background-color: $color5;
+      color: $color1;
+      border-radius: 10px;
+      box-shadow: 0 0 15px $col2;
+      position: relative;
+      overflow: hidden;
+      z-index: 10;
+      transform: perspective(1000px);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        right: -3px;
+        bottom: -3px;
+        background: conic-gradient($col6);
+        border-radius: 12px;
+        z-index: -1;
+        filter: blur(5px);
+        opacity: 1;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $col1;
+        border-radius: 10px;
+        z-index: -1;
+      }
+
+      .descriptionBox {
+        background-color: $col1;
+        color: $color1;
+        padding: 10px;
+        border-radius: 6px;
+        margin-top: 10px;
+        display: block;
+      }
+
+      > a {
+        align-self: flex-end; // Align the button to the right side
+        margin-top: 10px;
+
+        > button {
+          background-color: $col6;
+          padding: 8px;
+          // border: 2px solid $col2;
+          // border-radius: 4px;
+          color: white;
+
+          &:hover {
+            scale: 1.2;
+          }
+        }
+      }
+    }
+  }
+
+  .leftTimeline {
+    left: 0%;
+  }
+
+  .rightTimeline {
+    left: 50%;
+
+    &::after {
+      left: -12px;
+    }
+  }
+
+  @keyframes upanddown {
+    0% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(5px);
+    }
+  }
+}

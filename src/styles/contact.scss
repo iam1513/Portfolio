@@ -1,0 +1,79 @@
+@keyframes imgUp {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+#contact {
+  width: 100%;
+  height: 86vh;
+  background-color: $col5;
+  margin-top: -200px;
+  display: flex;
+  justify-content: flex-end;
+
+  > div {
+    background-color: $col1;
+    margin-top: 4rem;
+    border-radius: 200px 0 0 200px;
+    width: 70%;
+    height: 70vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    > article {
+      display: flex;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      a {
+        text-decoration: none; // Remove underline from links
+        div {
+          animation: imgUp 0.7s linear infinite alternate;
+          margin: 1rem;
+          height: 9rem;
+          width: 9rem;
+          background-color: $col6;
+          border-radius: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: black;
+          cursor: pointer;
+          transition: all 0.5s;
+          &:hover {
+            background-color: $col1;
+            color: $col2;
+            border: 2px solid $col2;
+          }
+          svg {
+            font-size: 4rem;
+          }
+          p {
+            font: 900 1.2rem $text2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.text-profile {
+  display: flex;
+  max-width: 20%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: $col5 !important;
+  font: 900 3.5rem $text2;
+  color: $col2;
+  > h1 {
+    border-right: 8rem;
+    rotate: -90deg;
+  }
+}
