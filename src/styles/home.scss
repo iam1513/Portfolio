@@ -63,20 +63,12 @@
 
       &::after {
         content: "";
-<<<<<<< HEAD
         width: 40vmax;
-=======
-        width: 30vmax;
->>>>>>> ebe8de32c392dac6acf4a36bc07ad7bff14ffc37
         height: 40vmax;
         background-color: $col2;
         position: absolute;
         z-index: -60;
-<<<<<<< HEAD
         border-radius: 50%;
-=======
-        border-radius: 22%;
->>>>>>> ebe8de32c392dac6acf4a36bc07ad7bff14ffc37
       }
 
       > img {
