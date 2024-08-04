@@ -6,7 +6,7 @@
 
 #contact {
   width: 100%;
-  height: 92vh;
+  height: 86vh;
   background-color: $col5;
   margin-top: -200px;
   display: flex;
@@ -37,7 +37,7 @@
           margin: 1rem;
           height: 9rem;
           width: 9rem;
-          background-color: orange;
+          background-color: $col6;
           border-radius: 50%;
           display: flex;
           flex-direction: column;
@@ -48,8 +48,8 @@
           transition: all 0.5s;
           &:hover {
             background-color: $col1;
-            color: white;
-            border: 2px solid white;
+            color: $col2;
+            border: 2px solid $col2;
           }
           svg {
             font-size: 4rem;
