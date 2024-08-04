@@ -13,6 +13,8 @@ import {
   SiMysql,
   SiCplusplus,
   SiPython,
+  SiSequelize,
+  SiExpress,
 } from "react-icons/si";
 import Typewriter from "typewriter-effect";
 
@@ -43,10 +45,6 @@ const Skills = () => {
               <h3>CSS</h3>
             </span>
             <span>
-              <FaJs />
-              <h3>JavaScript</h3>
-            </span>
-            <span>
               <FaReact />
               <h3>React</h3>
             </span>
@@ -60,12 +58,8 @@ const Skills = () => {
               <h3>Node.js</h3>
             </span>
             <span>
-              <SiMongodb />
-              <h3>MongoDB</h3>
-            </span>
-            <span>
-              <SiMysql />
-              <h3>MySQL</h3>
+              <SiExpress />
+              <h3>Express</h3>
             </span>
           </article>
         </div>
@@ -94,12 +88,12 @@ const Skills = () => {
               <h3>MongoDB</h3>
             </span>
             <span>
-              <FaDatabase />
-              <h3>SQL</h3>
-            </span>
-            <span>
               <SiMysql />
               <h3>MySQL</h3>
+            </span>
+            <span>
+              <SiSequelize />
+              <h3>Sequelize</h3>
             </span>
           </article>
         </div>
