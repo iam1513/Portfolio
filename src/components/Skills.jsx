@@ -13,16 +13,8 @@ import {
   SiMysql,
   SiCplusplus,
   SiPython,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  SiSequelize,
   SiExpress,
->>>>>>> ebe8de32c392dac6acf4a36bc07ad7bff14ffc37
-=======
   SiSequelize,
-  SiExpress,
->>>>>>> 209ea41 (Proper links added and made changes in skills section too.)
 } from "react-icons/si";
 import Typewriter from "typewriter-effect";
 
@@ -53,16 +45,10 @@ const Skills = () => {
               <h3>CSS</h3>
             </span>
             <span>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <FaJs />
               <h3>JavaScript</h3>
             </span>
             <span>
-=======
->>>>>>> ebe8de32c392dac6acf4a36bc07ad7bff14ffc37
-=======
->>>>>>> 209ea41 (Proper links added and made changes in skills section too.)
               <FaReact />
               <h3>React</h3>
             </span>
@@ -76,22 +62,8 @@ const Skills = () => {
               <h3>Node.js</h3>
             </span>
             <span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <SiMongodb />
-              <h3>MongoDB</h3>
-            </span>
-            <span>
-              <SiMysql />
-              <h3>MySQL</h3>
-=======
               <SiExpress />
               <h3>Express</h3>
->>>>>>> ebe8de32c392dac6acf4a36bc07ad7bff14ffc37
-=======
-              <SiExpress />
-              <h3>Express</h3>
->>>>>>> 209ea41 (Proper links added and made changes in skills section too.)
             </span>
           </article>
         </div>
@@ -120,32 +92,17 @@ const Skills = () => {
               <h3>MongoDB</h3>
             </span>
             <span>
-<<<<<<< HEAD
-<<<<<<< HEAD
+              <SiMysql />
+              <h3>MySQL</h3>
+            </span>
+            <span>
               <FaDatabase />
               <h3>SQL</h3>
             </span>
             <span>
-              <SiMysql />
-              <h3>MySQL</h3>
-            </span>
-=======
-              <SiMysql />
-              <h3>MySQL</h3>
-            </span>
-=======
-              <SiMysql />
-              <h3>MySQL</h3>
-            </span>
->>>>>>> 209ea41 (Proper links added and made changes in skills section too.)
-            <span>
               <SiSequelize />
               <h3>Sequelize</h3>
             </span>
-<<<<<<< HEAD
->>>>>>> ebe8de32c392dac6acf4a36bc07ad7bff14ffc37
-=======
->>>>>>> 209ea41 (Proper links added and made changes in skills section too.)
           </article>
         </div>
       </section>
