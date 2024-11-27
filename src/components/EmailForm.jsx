@@ -1,67 +1,115 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com"; // Import EmailJS
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const EmailForm = () => {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [feedback, setFeedback] = useState("");
+  const form = useRef();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    const templateParams = {
-      user_email: email,
-      message: message,
-    };
-
+  const sendEmail = (e) => {
+    e.preventDefault();
     emailjs
-      .send(
-        "your_service_id",
-        "your_template_id",
-        templateParams,
-        "your_user_id"
+      .sendForm(
+        "service_46vz2qg",
+        "template_bvs72dn",
+        form.current,
+        "oClNYWkTEC1W5h9Ao"
       )
-      .then(
-        (response) => {
-          setFeedback("Email sent successfully!");
-          setEmail("");
-          setMessage("");
-        },
-        (error) => {
-          setFeedback("Error sending email. Please try again.");
-        }
-      );
+      .then(() => {
+        e.target.reset();
+      })
+      .catch((err) => console.error("Failed to send email:", err));
   };
 
   return (
-    <div className="email-form-container">
-      <h2 className="email-form-title">Send Us an Email</h2>
-      <form onSubmit={handleSubmit} className="email-form">
-        <label className="email-form-label">
-          Email:
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="email-form-input"
-          />
-        </label>
-        <label className="email-form-label">
-          Message:
-          <textarea
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-            className="email-form-textarea"
-          />
-        </label>
-        <button type="submit" className="email-form-button">
-          Send
-        </button>
-      </form>
-      {feedback && <p className="email-form-message">{feedback}</p>}
-    </div>
+    <section id="emailform">
+      <h2>Get in touch</h2>
+      <div>
+        <div>
+          <h3>Text me</h3>
+          <div>
+            <div>
+              <i className="bx bx-mail-send"></i>
+              <h3>Email</h3>
+              <span>omshelke1513@gmail.com</span>
+              <a href="mailto:omshelke1513@gmail.com">
+                Write me
+                <i className="bx bx-right-arrow-alt"></i>
+              </a>
+            </div>
+            {/* <div>
+              <i className="bx bxl-whatsapp"></i>
+              <h3>WhatsApp</h3>
+              <span>XXXX-XXX-XXX</span>
+              <a href="https://wa.me/XXXXXXX">
+                Write me
+                <i className="bx bx-right-arrow-alt"></i>
+              </a>
+            </div> */}
+            <div>
+              <i className="bx bxl-linkedin"></i>
+              <h3>LinkedIn</h3>
+              <span>om shelke</span>
+              <a href="https://www.linkedin.com">
+                Write me
+                <i className="bx bx-right-arrow-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>Send a message</h3>
+          <form ref={form} onSubmit={sendEmail}>
+            <div>
+              <label style={{ color: "white" }}>Name</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Insert your name"
+                required
+              />
+            </div>
+            <div>
+              <label style={{ color: "white" }}>Mail</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Insert your email"
+                required
+              />
+            </div>
+            <div>
+              <label style={{ color: "white" }}>Message</label>
+              <textarea
+                name="message"
+                cols="30"
+                rows="10"
+                placeholder="Write a message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">
+              <div>Send</div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                color="blue"
+                fill="none"
+              >
+                <path
+                  d="M14.2199 21.9352C13.0399 21.9352 11.3699 21.1052 10.0499 17.1352L9.32988 14.9752L7.16988 14.2552C3.20988 12.9352 2.37988 11.2652 2.37988 10.0852C2.37988 8.91525 3.20988 7.23525 7.16988 5.90525L15.6599 3.07525C17.7799 2.36525 19.5499 2.57525 20.6399 3.65525C21.7299 4.73525 21.9399 6.51525 21.2299 8.63525L18.3999 17.1252C17.0699 21.1052 15.3999 21.9352 14.2199 21.9352ZM7.63988 7.33525C4.85988 8.26525 3.86988 9.36525 3.86988 10.0852C3.86988 10.8052 4.85988 11.9052 7.63988 12.8252L10.1599 13.6652C10.3799 13.7352 10.5599 13.9152 10.6299 14.1352L11.4699 16.6552C12.3899 19.4352 13.4999 20.4252 14.2199 20.4252C14.9399 20.4252 16.0399 19.4352 16.9699 16.6552L19.7999 8.16525C20.3099 6.62525 20.2199 5.36525 19.5699 4.71525C18.9199 4.06525 17.6599 3.98525 16.1299 4.49525L7.63988 7.33525Z"
+                  fill="blue"
+                ></path>
+                <path
+                  d="M10.11 14.7052C9.92005 14.7052 9.73005 14.6352 9.58005 14.4852C9.29005 14.1952 9.29005 13.7152 9.58005 13.4252L13.16 9.83518C13.45 9.54518 13.93 9.54518 14.22 9.83518C14.51 10.1252 14.51 10.6052 14.22 10.8952L10.64 14.4852C10.5 14.6352 10.3 14.7052 10.11 14.7052Z"
+                  fill="#FA8604"
+                ></path>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
   );
 };
 
