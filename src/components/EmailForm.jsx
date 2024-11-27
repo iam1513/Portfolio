@@ -29,7 +29,7 @@ const EmailForm = () => {
             <div>
               <i className="bx bx-mail-send"></i>
               <h3>Email</h3>
-              <span>omshelke1513@gmail.com</span>
+              <span>om.work1513@gmail.com</span>
               <a href="mailto:omshelke1513@gmail.com">
                 Write me
                 <i className="bx bx-right-arrow-alt"></i>
